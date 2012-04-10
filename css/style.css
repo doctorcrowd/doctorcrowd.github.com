@@ -2,23 +2,39 @@ body {
 	background:#fff;
 }
 
+#container {
+	position:absolute;
+	width:800px;
+	height:100%;
+	top:0;
+	left:50%;
+	margin-left:-400px;
+	-moz-box-shadow: 0px 0px 10px #222;
+    -webkit-box-shadow: 0px 0px 10px #222;
+    box-shadow: 0px 0px 10px #222
+}
+
 .header {
 	color:#fff;
 	background:#000;
 	font-family:Monaco, Courier, monospace;
-	padding-left:5px;
+	padding:2px 0px 2px 40px;
 }
 
 p {
 	color:#000;
 	background:none;
 	font-family:Monaco, Courier, monospace;
-	padding-left:5px;
+	padding:0 50px 0 50px;
 }
 
 .block a {
 	color:blue;
 	background:none;
 	font-family:Monaco, Courier, monospace;
-	padding-left:5px;
+	text-decoration:none;
+}
+
+.block a:hover {
+	text-decoration:underline;
 }
