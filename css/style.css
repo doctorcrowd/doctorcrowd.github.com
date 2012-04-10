@@ -5,5 +5,6 @@ body {
 p {
 	color:#fff;
 	background:#000;
-	font-family:Monaco, Courier, monospace;;
+	font-family:Monaco, Courier, monospace;
+	padding-left:5px;
 }
