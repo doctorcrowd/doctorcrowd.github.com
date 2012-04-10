@@ -2,9 +2,16 @@ body {
 	background:#fff;
 }
 
-p {
+.header {
 	color:#fff;
 	background:#000;
+	font-family:Monaco, Courier, monospace;
+	padding-left:5px;
+}
+
+p {
+	color:#000;
+	background:none;
 	font-family:Monaco, Courier, monospace;
 	padding-left:5px;
 }
