@@ -5,7 +5,7 @@ body {
 #container {
 	position:absolute;
 	width:800px;
-	height:100%;
+	height:auto;
 	top:0;
 	left:50%;
 	margin-left:-400px;
@@ -15,10 +15,13 @@ body {
 }
 
 .header {
+	position:fixed;
+	width:760px;
 	color:#fff;
 	background:#000;
 	font-family:Monaco, Courier, monospace;
 	padding:2px 0px 2px 40px;
+	z-index:2;
 }
 
 p {
@@ -37,4 +40,8 @@ p {
 
 .block a:hover {
 	text-decoration:underline;
+}
+
+.images {
+	margin:-50px 0 0 0;
 }
