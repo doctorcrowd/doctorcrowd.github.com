@@ -28,7 +28,7 @@ body {
 
 .menu {
 	position:absolute;
-	width:200px;
+	width:800px;
 	height:auto;
 	top:100px;
 	left:102%;
@@ -46,20 +46,55 @@ body {
 }
 
 .menu ul li{
+	width:auto;
+	content:"";
+	display:block;
 	font-size:13px;
 	font-weight:300;
 	color:#0b0;
 	list-style-type:none;
-	margin:0;
-	padding:10px 0 0 0;
+	margin:5px 0 0 0;
+	padding:1px 0 1px 5px;
+}
+
+.menu ul li a:hover{
+	text-decoration:none;
+	color:#0e0;
 }
 
 .menu ul li:hover{
 	color:#0e0;
+	text-decoration:none;
 }
 
 .menu ul li:hover:after{
-	content:" <";
+	content:" :";
+	color:#0e0;
+}
+
+#blog_link:hover:after{
+	content:" coming soon...";
+	color:#333;
+}
+
+#snap_link:hover:after{
+	content:" processing wip image gallery";
+	color:#333;
+}
+
+#twtt_link:hover:after{
+	content:" @doctorcrowd";
+	color:#333;
+}
+
+#gith_link:hover:after{
+	content:" github repositories";
+	color:#333;
+}
+
+#mail_link:hover:after{
+	content:" doctorcrowd@gmail.com";
+	color:#333;
 }
 
 /* .menu ul li:after{
@@ -95,12 +130,12 @@ p {
 .footer {
 	border-top:solid 1px #000;
 	background:#222;
-	height:60px;
+	height:80px;
 }
 
 .footer p {
 	font-family:Monaco, Courier, monospace;
 	font-size:13px;
 	color:#666;
-	padding-bottom:14px;
+	padding:3px 50px 14px 50px;
 }
