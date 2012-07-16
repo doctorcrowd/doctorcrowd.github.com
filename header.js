@@ -1,0 +1,1 @@
+document.write('<h1><a href="index.html">SMA</a><span class="subtitles">Pixel Refinement</span></h1>');

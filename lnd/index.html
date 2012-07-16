@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>DOCTORCROWD - Design / 3d Modeling / Visualization </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<script>
+	$(window).load(function() {
+
+	  $('#gallery img').each(function() {
+
+	    //createCanvas(this);
+	  });
+
+	  function createCanvas(image) {
+
+	    var canvas = document.createElement('canvas');
+	    if (canvas.getContext) {
+	      var ctx = canvas.getContext("2d");
+
+	      // specify canvas size
+	      canvas.width = image.width;
+	      canvas.height = image.height;
+
+	      // Once we have a reference to the source image object we can use the drawImage(reference, x, y) method to render it to the canvas. 
+		  //x, y are the coordinates on the target canvas where the image should be placed.
+	      ctx.drawImage(image, 0, 0);
+
+	      // Taking the image data and storing it in the imageData array. You can read the pixel data on a canvas using the getImageData() method. Image data includes the colour of the pixel (decimal, rgb values) and transparency (alpha value). Each color component is represented by an integer between 0 and 255. imageData.da contains height x width x 4 bytes of data, with index values ranging from 0 to (height x width x 4)-1.
+	      var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height),
+	          pixelData = imageData.data;
+
+	      // Loop through all the pixels in the imageData array, and modify
+	      // the red, green, and blue color values.
+	      for (var y = 0; y < canvas.height; y++) {
+	        for (var x = 0; x < canvas.width; x++) {
+
+	          // You can access the color values of the (x,y) pixel as follows :
+	          var i = (y * 4 * canvas.width) + (x * 4);
+
+	          // Get the RGB values.
+	          var red = pixelData[i];
+	          var green = pixelData[i + 1];
+	          var blue = pixelData[i + 2];
+
+	          // Convert to grayscale. One of the formulas of conversion (e.g. you could try a simple average (red+green+blue)/3)   
+	          var grayScale = (red * 0.3) + (green * 0.59) + (blue * .11);
+
+	          pixelData[i] = grayScale;
+	          pixelData[i + 1] = grayScale;
+	          pixelData[i + 2] = grayScale;
+	        }
+	      }
+
+	      // Putting the modified imageData back on the canvas.
+	      ctx.putImageData(imageData, 0, 0, 0, 0, imageData.width, imageData.height);
+
+	      // Inserting the canvas in the DOM, before the image:
+	      image.parentNode.insertBefore(canvas, image);
+	    }
+	  }
+	});
+
+
+</script>
+<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+
+<body>
+	<div id="wrap">
+		<script type="text/javascript" src="../header.js"></script>
+		<h2><a href="../index.html">Home</a> / <a href="../3d.html">3d Modeling & Visualization</a> / <a href="../2d.html">Web Design & Graphic Design</a> / <a href="../4d.html">Research</a> / Bio<a href="../contact.html" id="menu_contact">Contact</a></h2>
+		<ul id="gallery">
+			<li style="width:640px;"><img src="../images/lnd_02.png"></li>
+			<li><img src="../images/lnd_03.png"></li>												
+		</ul>
+		<div class="project_description">
+		<br>
+		<div class="project_title">Wandsworth Tower Real Estate (2008)</div><br>
+		Design: <a href="http://www.mcarchitects.it" target="_blank">MCA Mario Cucinella Architects</a><br>
+		Concept design for two mixed-use buildings in London.<br>
+		3d modeling and rendering—<br>
+		<br>
+		<br>
+		<br>
+		<a href="../3d.html">< back</a>
+		</div>			
+		<div id="footer">
+			<script type="text/javascript" src="../footer.js"></script>
+		</div>
+	</div>		
+</body>
+</html>

@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paper.js &mdash; Smoothing
+</title>
+<script type="text/javascript" src="js/paper.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+    // Create a Paper.js Path to draw a line into it:
+var values = {
+    friction: 0.8,
+    timeStep: 0.01,
+    amount: 15,
+    mass: 2,
+    count: 0
+};
+values.invMass = 1 / values.mass;
+
+var path;
+var size = view.size * [1.2, 1];
+
+var Spring = Base.extend({
+    initialize: function(a, b, param) {
+        if (!param)
+            param = {};
+        this.a = a;
+        this.b = b;
+        this.restLength = param.restLength || 80;
+        this.strength = param.strength ? param.strength : 0.55;
+        this.mamb = values.invMass * values.invMass;
+    },
+    
+    update: function() {
+        var delta = this.b - this.a;
+        var dist = delta.length;
+        var normDistStrength = (dist - this.restLength) /
+                (dist * (this.mamb)) * this.strength;
+        delta.y *= (normDistStrength * values.invMass) / 5;
+        if (!this.a.fixed)
+            this.a.y += delta.y;
+        if (!this.b.fixed)
+            this.b.y -= delta.y;
+    }
+});
+
+onResize();
+
+function createPath(strength) {
+    var path = new Path();
+    path.data = {};
+    path.data.springs = [];
+    path.fillColor = 'black';
+    path.strokeColor = '#0ff';
+    segments = path.segments;
+    var previous;
+    for (var i = 0; i <= values.amount; i++) {
+        var segment = path.add(new Point(i / values.amount, 0.7) * size);
+        var point = segment.point;
+        point.px = point.x;
+        point.py = point.y;
+        point.fixed = i === 0 || i == values.amount;
+        if (previous) {
+            var spring = new Spring(previous, point, {
+                strength: strength
+            });
+            path.data.springs.push(spring);
+        }
+        previous = point;
+    }
+    path.position.x -= size.width / 4;
+    return path;
+}
+
+function onResize() {
+    values.count = 0;
+    if (path) {
+        path.remove();
+    }
+    size = view.bounds.size * [2, 1];
+    path = createPath(0.1);
+}
+
+function onMouseMove(event) {
+    var segments = path.segments;
+    var index = Math.floor((event.point.x + size.width / 4) * segments.length / size.width);
+    var y = event.point.y;
+    var range = size.height / 4;
+    var segment = segments[index];
+    var point = segment.point;
+    var prev, next;
+    if (segment.previous)
+        prev = segment.previous.point;
+    if (segment.next)
+        next = segment.next.point;
+
+    if (!point.fixed && y + range > point.y && y - range < point.y) {
+        point.y += (y - point.y) / 6;
+        if (prev && !prev.fixed) prev.y += (y - prev.y) / 12;
+        if (next && !next.fixed) next.y += (y - next.y) / 12;
+    }
+}
+
+function onFrame(event) {
+    if (values.count != 0) {
+        path.firstSegment.remove();
+        path.lastSegment.remove();
+    }
+    updateWave(path);
+    values.count++;
+}
+
+function updateWave(path) {
+    var segments = path.segments;
+    var force = 1 - values.friction * values.timeStep * values.timeStep;
+    for (var i = 0, l = segments.length; i < l; i++) {
+        var point = segments[i].point;
+        var ty = point.y;
+        var dy = (point.y - point.py) * force;
+        point.y += dy;
+        point.py = ty;
+        point.y = Math.max(0, point.y);
+    }
+
+    for (var j = 0, l = path.data.springs.length; j < l; j++) {
+        path.data.springs[j].update(true);
+    }
+    path.smooth();
+    path.insert(0, new Point(0, size.height));
+    path.add(new Point(size));
+}
+
+function onKeyDown(event) {
+    if (event.key == 'space')
+        path.fullySelected = !path.fullySelected;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <canvas id="myCanvas" style="left:0;background:none;"resize></canvas>
+    <div style="position:absolute;left:0;top:0;border-right:solid 1px #0ff;width:7%;height:100%;background:none;"></div>
+    <div style="position:absolute;top:0;border-right:solid 1px #0ff;width:20%;height:100%;background:none;"></div>
+    <div style="position:absolute;top:0;border-right:solid 1px #0ff;width:39%;height:100%;background:none;"></div>
+    <div style="position:absolute;top:0;border-right:solid 1px #0ff;width:40%;height:100%;background:none;"></div>           
+    <div style="position:absolute;top:0;border-right:solid 1px #0ff;width:49.5%;height:100%;background:none;"></div>
+    <div style="position:absolute;top:0;border-right:solid 1px #0ff;width:59.5%;height:100%;background:none;"></div>
+    <div style="position:absolute;top:0;border-right:solid 1px #0ff;width:80%;height:100%;background:none;"></div>      
+    <div style="position:absolute;top:0;border-bottom:solid 1px #0ff;width:100%;height:10%;background:none;"></div>
+    <div style="position:absolute;top:0;border-bottom:solid 1px #0ff;width:100%;height:17%;background:none;"></div>        
+    <div style="position:absolute;top:0;border-bottom:solid 1px #0ff;width:100%;height:51%;background:none;"></div>    
+    <div style="position:fixed;color:#000;font-family:'Merriweather';left:20%;height:51%;font-size:32px;width:100%;white-space:normal;background:none;"><div style="position:absolute;bottom:0;width:50%;" ><a href="index.html" style="color:#000;">This is waht I call a fluid layout.</a></div></div>
+    <div id="wrap">
+        <script type="text/javascript" src="header.js"></script>
+        <h2>Home / <a href="3d.html">3d Modeling & Visualization</a> / <a href="2d.html">Web Design & Graphic Design</a> / <a href="4d.html">Research</a> / Bio<a href="contact.html" id="menu_contact">Contact</a></h2>
+    <div id="footer" style="background:none;">
+        <script type="text/javascript" src="footer.js"></script>
+    </div>      
+
+    </div> 
+</body>
+</html>
