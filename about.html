@@ -2,15 +2,18 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<script type="text/javascript" src="../title.js"></script>
+	<script type="text/javascript" src="title.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/paper.js"></script>
+	<script type="text/paperscript" src="js/fluid_behavior_02.js" canvas="myCanvas_02"></script>
 
 	<script>
 	$(window).load(function() {
 
 	  $('#gallery img').each(function() {
 
-	    //createCanvas(this);
+	    createCanvas(this);
 	  });
 
 	  function createCanvas(image) {
@@ -65,33 +68,26 @@
 
 </script>
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="../style.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
 	<div id="wrap">
-		<script type="text/javascript" src="../header.js"></script>
-		<h2><a href="../index.html">Home</a> / <a href="../3d.html">Modeling & Visualization</a> / <a href="../2d.html">Web Design & Graphic Design</a> / <a href="../4d.html" class="active">Research</a> / <a href="about.html">About</a><a href="../contact.html" id="menu_contact">Contact</a></h2>
-		<ul id="gallery">
-			<li><a HREF="javascript:history.back()"><img src="../images/scr_004.png"></a></li>
-			<li><a HREF="javascript:history.back()"><img src="../images/scr_008.png"></a></li>
-			<div id="backtag"><a HREF="javascript:history.back()">Back to previous page</a></div>
-		</ul>
-		<div class="project_description">
-		<br>
-		<div class="project_title">Growing Principles (2012)</div>
-		The work on this page is released under Attribution-ShareAlike 3.0 licence <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a><br>
-		<br>
-		Tool: <a href="http://www.processing.org" target="_blank">processing</a><br>
-		Script—<br>
+		<script type="text/javascript" src="header.js"></script>
+		<h2><a href="index.html">Home</a> / <a href="3d.html">Modeling & Visualization</a> / <a href="2d.html">Web Design & Graphic Design</a> / <a href="4d.html">Research</a> / <a href="about.html" class="active">About</a><a href="contact.html" id="menu_contact">Contact</a></h2>
+		<div id="disclaimer">
 		<br>
 		<br>
-		<a href="../4d.html" id="back_button">< back</a>
+		<br>
+		DR.C is the online repository of Stefano Massa's work and research in the field of modeling, visualization, graphic design and web development. It is also a place where to define a common ground to all these different domains and a playground for experimenting with code.<br>
+		<br>
+		Stefano (aka <a href="http://twitter.com/doctorcrowd">@doctorcrowd</a>) is a trained architect and visual designer. His work and research is focused on the relationship between matter, soicety and information. In 2005 he graduated from IUAV University in Venice with a 5-year program of Architecture degree. He has been practicing in Italy, France and United Kingdom. In 2009 he was care of Arcosanti, the experimental urban laboratory of Paolo Soleri in the desert of Arizona. He is currently based in Zurich, Switzerland. He is also speaking in third person, something which he is not really good at and which usually horrifies him.<br>
+		<br>
+		The design of this website was made possible by people sharing their knowledge. People like PeHaa (<a href="http://pehaa.com/">pehaa.com</a>), Ben Fry and Casey Reas (<a href="processing.org">processing.org</a>),  Jürg Lehni and Jonathan Puckey (<a href="">paperjs.org</a>), Massimo Banzi (<a href="http://www.arduino.org">arduino.org</a>), Ton Roosendaal and the Blender Foundation (<a href="http://www.blender.org">blender.org</a>). That's why I am advocating for sharing information, open source initiatives and free software. I invite you to do the same. And yes, I believe <a href="http://www.everythingisaremix.info">everything is a remix</a>.<br>
 		</div>			
 		<div id="footer">
-			<script type="text/javascript" src="../footer.js"></script>
+			<script type="text/javascript" src="footer.js"></script>
 		</div>
 	</div>
-	<script type="text/javascript" src="../js/backtoprevious.js"></script>
 </body>
 </html>

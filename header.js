@@ -1,1 +1,1 @@
-document.write('<h1><a href="index.html">SMA</a><span class="subtitles">Pixel Refinement</span></h1>');
+document.write('<h1><a href="http://doctorcrowd.github.com">DR.C<span class="subtitles">Visuals & Co.</span></a></h1>');

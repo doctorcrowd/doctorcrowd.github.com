@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>GRID_MACHINE
+</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+    <canvas id="myCanvas" style="left:0;background:none;" resize></canvas>
+    <div style="position:fixed;color:#000;font-family:'Merriweather';left:40%;height:23%;font-size:12px;width:100%;white-space:normal;background:none;display:block;">
+        <div style="position:absolute;bottom:0;width:5%;">Built on Paper.js framework. Visit paperjs.org for great resources and examples.</div>
+    </div>  
+    <div style="position:fixed;color:#000;font-family:'Merriweather';left:10%;height:60%;font-size:12px;width:100%;white-space:normal;background:none;display:block;">
+        <div style="position:absolute;bottom:0;width:10%;">Built on Paper.js framework. Visit paperjs.org for great resources and examples.</div>
+    </div>
+    <div style="position:fixed;color:#000;font-family:'Merriweather';left:80%;height:55%;font-size:32px;width:100%;white-space:normal;background:none;display:block">
+        <div style="position:absolute;bottom:0;width:20%;" ><a href="index.html" style="color:#000;">This is waht I call a fluid layout.</a></div>
+    </div>   
+    <div style="position:fixed;color:#000;font-family:'Merriweather';left:20%;height:53%;font-size:12px;width:100%;white-space:normal;background:none;display:block;">
+        <div style="position:absolute;bottom:0;width:50%;">Built on Paper.js framework. Visit paperjs.org for great resources and examples.</div>
+    </div>  
+    <div style="position:fixed;color:#000;font-family:'Merriweather';left:20%;height:53%;font-size:12px;width:100%;white-space:normal;background:none;display:block;">
+        <div style="position:absolute;bottom:0;width:50%;">Built on Paper.js framework. Visit paperjs.org for great resources and examples.</div>
+    </div>
+    <div style="position:fixed;color:#000;font-family:'Merriweather';left:20%;height:51%;font-size:32px;width:100%;white-space:normal;background:none;display:block">
+        <div style="position:absolute;bottom:0;width:50%;" ><a href="index.html" style="color:#000;">This is waht I call a fluid layout.</a></div>
+    </div>   
+    <div style="position:fixed;color:#000;font-family:'Merriweather';left:20%;height:53%;font-size:12px;width:100%;white-space:normal;background:none;display:block;">
+        <div style="position:absolute;bottom:0;width:50%;">Built on Paper.js framework. Visit paperjs.org for great resources and examples.</div>
+    </div>  
+    <div style="position:fixed;color:#000;font-family:'Merriweather';left:20%;height:53%;font-size:12px;width:100%;white-space:normal;background:none;display:block;">
+        <div style="position:absolute;bottom:0;width:50%;">Built on Paper.js framework. Visit paperjs.org for great resources and examples.</div>
+    </div>
+    <div style="position:fixed;color:#000;font-family:'Merriweather';left:20%;height:51%;font-size:32px;width:100%;white-space:normal;background:none;display:block">
+        <div style="position:absolute;bottom:0;width:50%;" ><a href="index.html" style="color:#000;">This is waht I call a fluid layout.</a></div>
+    </div>    
+    <div id="wrap">
+        <script type="text/javascript" src="header.js"></script>
+        <h2>Home / <a href="3d.html">3d Modeling & Visualization</a> / <a href="2d.html">Web Design & Graphic Design</a> / <a href="4d.html">Research</a> / Bio<a href="contact.html" id="menu_contact">Contact</a></h2>
+    <div id="footer" style="background:none;">
+        <script type="text/javascript" src="footer.js"></script>
+    </div>  
+    </div>
+        <span id="message" style="position:fixed;top:50%;left:50%;font-size:40px;">I told you don't touch it.</span>
+    <script>
+        for (i=0; i<10; i++) {
+            var newdiv = document.createElement("div");
+            newdiv.style.top = "0";
+            newdiv.style.left = "0";        
+            newdiv.style.width = i * 40 + "px";
+            newdiv.style.height = "100px";
+            newdiv.style.background = "red";
+            newdiv.style.color = "white";
+            newdiv.innerHTML = i;
+            //document.body.appendChild(newdiv); 
+        }
+    </script>
+    <script>
+        $('body')
+        .append('my DOM manupulation skills dont seem like a big deal when using jquery')
+        .css('color', 'red');
+    </script>
+</body>
+</html>

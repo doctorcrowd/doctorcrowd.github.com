@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>SMA Pixel Refinement</title>
+	<script type="text/javascript" src="../title.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 	<script>
@@ -71,25 +71,28 @@
 <body>
 	<div id="wrap">
 		<script type="text/javascript" src="../header.js"></script>
-		<h2><a href="../index.html">Home</a> / <a href="../3d.html">3d Modeling & Visualization</a> / <a href="../2d.html">Web Design & Graphic Design</a> / <a href="../4d.html">Research</a> / Bio<a href="../contact.html" id="menu_contact">Contact</a></h2>
+		<h2><a href="../index.html">Home</a> / <a href="../3d.html">Modeling & Visualization</a> / <a href="../2d.html" class="active">Web Design & Graphic Design</a> / <a href="../4d.html">Research</a> / <a href="about.html">About</a><a href="../contact.html" id="menu_contact">Contact</a></h2>
 		<ul id="gallery">
-			<li><img src="../images/electricfeel.png"></li>
-			<li><img src="../images/elf_02.png"></li>		
+			<li><a HREF="javascript:history.back()"><img src="../images/electricfeel.png"></a></li>
+			<li><a HREF="javascript:history.back()"><img src="../images/elf_02.png"></a></li>
+			<div id="backtag"><a HREF="javascript:history.back()">Back to previous page</a></div>
 		</ul>
 		<div class="project_description">
 		<br>
-		<div class="project_title">ElectricFeel (2012)</div><br>
-		Client: <a href="http://www.electricfeel.com" target="_blank">ElectricFeel</a><br>
+		ElectricFeel (2012) - <a href="http://www.electricfeel.com" target="_blank">www.electricfeel.com</a><br>
 		Start-up for electric networked mobility.<br>
+		<br>
+		Design: <a href="http://conceptualdevices.com">Conceptual Devices</a><br>
 		Logo design—<br>
+		<br>		
 		<br>
 		<br>
-		<br>
-		<a href="../2d.html">< back</a>
+		<a href="../2d.html" id="back_button">< back</a>
 		</div>			
 		<div id="footer">
 			<script type="text/javascript" src="../footer.js"></script>
 		</div>
-	</div>		
+	</div>
+	<script type="text/javascript" src="../js/backtoprevious.js"></script>
 </body>
 </html>

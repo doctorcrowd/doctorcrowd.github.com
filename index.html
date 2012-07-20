@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>SMA - Pixel Refinement</title>
+	<script type="text/javascript" src="title.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="js/paper.js"></script>
@@ -67,6 +67,9 @@
 
 
 </script>
+
+
+
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -74,22 +77,106 @@
 <body>
 	<div id="wrap">
 		<script type="text/javascript" src="header.js"></script>
-		<h2>Home / <a href="3d.html">3d Modeling & Visualization</a> / <a href="2d.html">Web Design & Graphic Design</a> / <a href="4d.html">Research</a> / Bio<a href="contact.html" id="menu_contact">Contact</a></h2>
+		<h2><a href="3d.html" id="menu_3d">Modeling & Visualization</a> / <a href="2d.html" id="menu_2d">Web Design & Graphic Design</a> / <a href="4d.html" id="menu_4d">Research</a> / <a href="about.html">About</a><a href="contact.html" id="menu_contact" style="padding-left:340px">Contact</a></h2>
 		<ul id="gallery">
-			<li id="box_01"><a href="3d.html"><img src="images/bfc.png"></a><div><a href="3d.html">3d Modeling/Visualization</a></div></li>
-			<li id="box_02"><a href="2d.html"><img src="images/pixelace_big.png"></a><div><a href="2d.html">Graphic Design/Web Design</a></div></li>
-			<li id="box_02"><a href="4d.html"><img src="images/scr_004.png"></a><div><a href="4d.html">Scripting/Research</a></div></li>
+			<div id="first_row" style="width:auto;height:202px;">
+				<li style="width:163px;height:163px;"><a href="3d.html"><img style="width:163px;height:163px;" src="images/rom_05.png"></a></li>
+				<li style="width:163px;height:163px;"><a href="3d.html"><img style="width:163px;height:163px;" src="images/bfc.png"></a></li>
+				<li style="width:163px;height:163px;"><a href="3d.html"><img style="width:163px;height:163px;" src="images/aaa.png"></a></li>
+				<li style="width:163px;height:163px;"><a href="3d.html"><img style="width:163px;height:163px;" src="images/bfc_04.png"></a></li>
+				<li style="width:163px;height:163px;"><a href="3d.html"><img style="width:163px;height:163px;" src="images/hub.png"></a></li>
+			</div>
+			<div id="second_row" style="width:auto;height:202px;">
+				<li id="second_row" style="width:163px;height:163px;"><a href="2d.html"><img style="width:163px;height:163px;" src="images/nuw.png"></a></li>
+				<li id="second_row" style="width:163px;height:163px;"><a href="2d.html"><img style="width:163px;height:163px;" src="images/sso_03.png"></a></li>
+				<li id="second_row" style="width:163px;height:163px;"><a href="2d.html"><img style="width:163px;height:163px;" src="images/electricfeel.png"></a></li>
+				<li id="second_row" style="width:163px;height:163px;"><a href="2d.html"><img style="width:163px;height:163px;" src="images/omp_02.png"></a></li>
+				<li id="second_row" style="width:163px;height:163px;"><a href="2d.html"><img style="width:163px;height:163px;" src="images/tth_03.png"></a></li>
+			</div>
+			<div id="third_row" style="width:auto;height:202px;">
+				<li id="third_row" style="width:163px;height:163px;"><a href="4d.html"><img style="width:163px;height:163px;" src="images/scr_005.png"></a></li>
+				<li id="third_row" style="width:163px;height:163px;"><a href="4d.html"><img style="width:163px;height:163px;" src="images/scr_003.png"></a></li>
+				<li id="third_row" style="width:163px;height:163px;"><a href="4d.html"><img style="width:163px;height:163px;" src="images/scr_011.png"></a></li>
+				<li id="third_row" style="width:163px;height:163px;"><a href="4d.html"><img style="width:163px;height:163px;" src="images/scr_004.png"></a></li>
+				<li id="third_row" style="width:163px;height:163px;"><a href="4d.html"><img style="width:163px;height:163px;" src="images/scr_016.png"></a></li>
+			</div>						
 		</ul>
-		<div id="disclaimer">
+		<div id="threed_tag">Modeling</div>
+		<div id="twod_tag">Graphics</div>
+		<div id="fourd_tag">Scripting</div>		
+		<div id="disclaimer" style="line-height:22px;">
 		<br>
+<<<<<<< HEAD
 		SMA is an archive of selected works, projects and researches, in the process of being organized in thematic visual arrays.<br>
 		Here you can find mainly 3d modeling, visualization and graphic design, together with HTML5/scripting experiments and web design and development.<br>
 		<br>
 		Please have a look around and feel free to <a href="mailto:ste.massa@gmail.com">contact me</a> for more information or if you are interested in a collaboration.
 		</div>			
+=======
+		DR.C is an archive of selected works, projects and researches, visually organized in thematic arrays.<br>
+		Please have a look around and feel free to <a href="mailto:ste.massa@gmail.com">contact me</a> for more information or if you are interested in a collaboration.
+		</div>		
+>>>>>>> New Website Update
 		<div id="footer">
 			<script type="text/javascript" src="footer.js"></script>
 		</div>
-	</div>
+	</div>	
+	<script>
+	// highliting menu categories
+		/*
+		var mouseX = 0;
+		var mouseY = 0;
+		$(document).mousemove( function(e) {
+		   mouseX = e.pageX; 
+		   mouseY = e.pageY;
+		 	$('#threed_tag').css({'left': mouseX-700});
+		 	$('#twod_tag').css({'left': mouseX-900});
+		 	$('#fourd_tag').css({'left': mouseX}); 
+		 });
+		*/
+		var fadingtime = 180;
+		$('#first_row').hover(function(){
+			$('h2 #menu_3d').css({'text-decoration':'underline'});
+			$('#threed_tag').fadeTo(fadingtime, 1);
+			//$('#second_row, #third_row > li').animate({'opacity':'0.75'},300);
+		});
+		$('#first_row').mouseleave(function(){
+			$('h2 #menu_3d').css({'text-decoration':'none'});
+			$('#threed_tag').fadeTo(fadingtime, 0);		
+			//$('#second_row, #third_row > li').animate({'opacity':'1'},300);				
+		});
+		$('#second_row').hover(function(){
+			$('h2 #menu_2d').css({'text-decoration':'underline'});
+			$('#twod_tag').fadeTo(fadingtime, 1);		
+			//$('#first_row, #third_row > li').animate({'opacity':'0.75'},300);			
+		});
+		$('#second_row').mouseleave(function(){
+			$('h2 #menu_2d').css({'text-decoration':'none'});
+			$('#twod_tag').fadeTo(fadingtime, 0);				
+			//$('#first_row, #third_row > li').animate({'opacity':'1'},300);				
+		});
+		$('#third_row').hover(function(){
+			$('h2 #menu_4d').css({'text-decoration':'underline'});
+			$('#fourd_tag').fadeTo(fadingtime, 1);		
+			//$('#first_row, #second_row > li').animate({'opacity':'0.75'},300);			
+		});
+		$('#third_row').mouseleave(function(){
+			$('h2 #menu_4d').css({'text-decoration':'none'});
+			$('#fourd_tag').fadeTo(fadingtime, 0);				
+			//$('#first_row, #second_row > li').animate({'opacity':'1'},300);				
+		});
+
+	// Shortening dashed line
+			$('h1').css({'margin-right':'417px'});
+			//$('#second_row, #third_row > li').animate({'opacity':'0.75'},300);
+	/* animated footer sliding up
+		$('#footer').hover(function(){
+			$(this).animate({'height':'70%', 'opacity':'0.85'}, 1000);
+		});
+		$('#footer').mouseleave(function(){
+			$(this).animate({'height':'75px', 'opacity':'1'}, 1000);
+		});
+	*/			        
+	</script>
 </body>
 </html>
