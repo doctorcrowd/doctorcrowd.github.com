@@ -35,7 +35,7 @@ body {color:#000;background:#fff;font-family:BebasNeueRegular;}
 	height:330px;
 }
 
-h1 {font-size:60px;margin-left:8px;margin-right:353px;margin-bottom:20px;padding-top:30px;text-shadow:0 1px 0 #fff;font-weight: normal;border-bottom: 1px dashed #000;}
+h1 {font-size:60px;margin-left:8px;margin-right:9px;margin-bottom:20px;padding-top:30px;text-shadow:0 1px 0 #fff;font-weight: normal;border-bottom: 1px dotted #000;}
 
 h1 a {color:#000;}
 
@@ -226,7 +226,7 @@ p a:hover {color:#f05000;}
 	z-index:2;
 	width: 1013px; margin: 0 auto;
 	height:75px;
-	border-top:solid 1px #ccc;
+	border-top:dotted 1px #ccc;
 	background-color:#fff;
     line-height:20px;
     margin-left:4px;   
@@ -248,7 +248,7 @@ p a:hover {color:#f05000;}
 }
 
 .contact {
-	font-family:Monaco;
+	font-family:Courier;
 	font-size:12px;
 }
 
