@@ -2,20 +2,15 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<script type="text/javascript" src="title.js"></script>
+	<script type="text/javascript" src="../title.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-	<script type="text/javascript" src="js/paper.js"></script>
-	<script type="text/paperscript" src="js/fluid_behavior_01.js" canvas="myCanvas_01"></script>
-	<script type="text/paperscript" src="js/fluid_behavior_02.js" canvas="myCanvas_02"></script>	
-	<script type="text/paperscript" src="js/fluid_behavior_03.js" canvas="myCanvas_03"></script>	
 
 	<script>
 	$(window).load(function() {
 
 	  $('#gallery img').each(function() {
 
-	    createCanvas(this);
+	    //createCanvas(this);
 	  });
 
 	  function createCanvas(image) {
@@ -70,33 +65,34 @@
 
 </script>
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
 </head>
 
 <body>
 	<div id="wrap">
-		<script type="text/javascript" src="header.js"></script>
-		<h2><a href="index.html">Home</a> / <a href="3d.html">Modeling & Visualization</a> / <a href="2d.html">Web Design & Graphic Design</a> / <a href="4d.html" class="active">Research</a> / <a href="about.html">About</a><a href="contact.html" id="menu_contact">Contact</a></h2>
+		<script type="text/javascript" src="../header.js"></script>
+		<h2><a href="../index.html">Home</a> / <a href="../3d.html">Modeling & Visualization</a> / <a href="../2d.html">Web Design & Graphic Design</a> / <a href="../4d.html" class="active">Research</a> / <a href="../about.html">About</a><a href="../contact.html" id="menu_contact">Contact</a></h2>
 		<ul id="gallery">
-			<li><a href="scr_01/index.html"><img src="images/scr_004.png"><div>Growth Process (Processing)</div></a></li>
-			<li id="box_03"><a href="scr_05/index.html"><canvas id="myCanvas_03" width="300" height="300"></canvas><div>Shifting Landscape (Paper.js)</a></div></li>		
-			<li><a href="scr_02/index.html"><img src="images/scr_003.png"><div>Pattern Machine (Processing)</div></a></li>
-			<li><a href="scr_03/index.html"><img src="images/scr_005.png"><div>Density Vibes (Processing)</div></a></li>
-			<li><a href="scr_04/index.html"><img src="images/scr_002.png"><div>Skin Studies (Processing)</div></a></li>
-			<li id="box_03"><a href="scr_05/index.html"><canvas id="myCanvas_01" width="300" height="300"></canvas><div>Elastic Curve (Paper.js)</a></div></li>
-			<li id="box_03"><a href="scr_05/index.html"><canvas id="myCanvas_02" width="300" height="300"></canvas><div>Elastic Landscape (Paper.js)</a></div></li>
-			<li><a href="scr_07/index.html"><img src="images/scr_007.png"><div>Citydust (processing)</div></a></li>
-			<li><img src="images/transient.png"><div>Fibril/Transient (Processing)</div></li>
-			<li><a href="scr_06/index.html"><img src="images/scr_001.png"><div>Graphic Fields (Processing)</div></a></li>
-			<li><a href="scr_08/index.html"><img src="images/scr_006.png"><div>Markup City (processing)</div></a></li>
-			<li><a href="http://doctorcrowd.github.com/itsonlycssbaby"><img src="images/ioc_01.png"><div>It's only CSS baby (CSS/Jquery)</div></li>
-			<li><a href="http://doctorcrowd.github.com/highrise_09"><img src="images/hgr_01.png"><div>High Rise (CSS/Jquery)</div></li>
+			<li><a HREF="javascript:history.back()"><img src="../images/hgr_01.png"></a></li>
+			<li><a HREF="javascript:history.back()"><img src="../images/hgr_02.png"></a></li>
+			<li><a HREF="javascript:history.back()"><img src="../images/hgr_03.png"></a></li>
+			<div id="backtag"><a HREF="javascript:history.back()">Back to previous page</a></div>
 		</ul>
-		<div id="disclaimer">
-		</div>
+		<div class="project_description">
+		<br>
+		<div class="project_title">High Rise (2012)</div>
+		A HTML architectural layout generator (No images used)<br>
+		<br>
+		Tool: HTML/CSS/Javascript<br>
+		Script—<br>
+		<br>
+		<br>		
+		<a href="../4d.html" id="back_button">< back</a>
+		</div>			
 		<div id="footer">
-			<script type="text/javascript" src="footer.js"></script>
+			<script type="text/javascript" src="../footer.js"></script>
 		</div>
 	</div>
+	<script type="text/javascript" src="../js/backtoprevious.js"></script>
 </body>
 </html>
