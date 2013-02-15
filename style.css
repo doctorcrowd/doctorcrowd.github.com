@@ -15,12 +15,12 @@ a {text-decoration:none;}
 
 @font-face {
     font-family: 'BebasNeueRegular';
-
     src: url('BebasNeue-webfont.woff') format('woff'),
          url('BebasNeue-webfont.ttf') format('truetype'),
          url('BebasNeue-webfont.svg#webfontfvFLBU0N') format('svg');
     font-weight: normal;
-    font-style: normal;}
+    font-style: normal;
+}
 
 body {color:#000;background:#fff;font-family:BebasNeueRegular;}
 
