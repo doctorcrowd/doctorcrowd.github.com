@@ -264,3 +264,23 @@ p a:hover {color:#f05000;}
 	position:absolute;
 	margin:14px 14px 10px 10px;right:0;
 }
+
+/* CONTACT PAGE */
+
+div.contact-text a:hover {
+	text-decoration:underline;
+}
+
+div.contact-text #email-link {
+	color:#C00000;
+}
+
+div.contact-text #twitter-link {
+	color:#4099FF;
+}
+
+div.contact-text #tumblr-link {
+	color:#fff;
+	background:#456179;
+	padding:  2px 3px 1px 3px;
+}
