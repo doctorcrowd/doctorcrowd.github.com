@@ -3,9 +3,9 @@ h1, h2, h3, h4, h5, h6, p,
 a, img,  ol, ul, li
 {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
 
-html {height:100%;overflow-y:scroll;}
+html {height:100%;}
 
-body {line-height: 1;height:100%;}
+body {line-height: 1;height:100%;overflow-y:scroll;}
 
 ol, ul {list-style: none;}
 
@@ -283,4 +283,34 @@ div.contact-text #tumblr-link {
 	color:#fff;
 	background:#456179;
 	padding:  2px 3px 1px 3px;
+}
+
+/* ABOUT PAGE */
+
+.heroes {
+	position:absolute;
+	top:700px;
+	max-width:800px;
+}
+
+.heroes h1 {
+	font-family:'Merriweather';
+	font-size:24px;
+	border:none;
+}
+
+.heroes span {
+	font-size:1em;	
+}
+
+.heroes ul li {
+	width:300px;
+	height:auto;
+	background:#000;
+	box-shadow:none;
+	font-family:'Merriweather';
+}
+
+.heroes ul li a {
+	color:#fff;
 }
