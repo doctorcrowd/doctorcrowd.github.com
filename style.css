@@ -73,7 +73,7 @@ li div {font-family:Monaco;position:absolute;height:0; width:280px;background:rg
 
 li:hover div {height:45px;}
 
-canvas {opacity:1; position:absolute; top:0; left:0;-webkit-transition:opacity 1s .2s;-moz-transition:opacity 1s .2s;-o-transition:opacity 1s .2s;-ms-transition:opacity 1s .2s;transition:opacity 1s .2s;}
+canvas {opacity:1; position:absolute; top:7px; left:7px;-webkit-transition:opacity 1s .2s;-moz-transition:opacity 1s .2s;-o-transition:opacity 1s .2s;-ms-transition:opacity 1s .2s;transition:opacity 1s .2s;}
 
 li:hover canvas {opacity:0;}
 
