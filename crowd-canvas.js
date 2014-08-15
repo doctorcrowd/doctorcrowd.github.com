@@ -1,3 +1,7 @@
+// HTML5 Canvas Particles Web Matrix
+// by Kushagra Agarwal
+// http://cssdeck.com/labs/html5-canvas-particles-web-matrix
+
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       || 
 		  window.webkitRequestAnimationFrame || 

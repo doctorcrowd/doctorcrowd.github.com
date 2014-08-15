@@ -24,7 +24,22 @@ a {text-decoration:none;}
 
 body {color:#000;background:#fff;font-family:BebasNeueRegular;}
 
+.tumblr-link {
+	position:absolute;
+	right:10px;
+	top:70px;
+}
+
+.tumblr-link a {
+	color:black;
+}
+
+.tumblr-link a:hover {
+	color:#f05000
+}
+
 #wrap {
+	position:relative;
 	width: 1020px; margin: 0 auto;
 	min-height: 100%;
     height: auto !important;
@@ -288,9 +303,8 @@ div.contact-text #tumblr-link {
 /* ABOUT PAGE */
 
 .heroes {
-	position:absolute;
-	top:700px;
-	max-width:800px;
+	
+	max-width:1050px;
 }
 
 .heroes h1 {
@@ -304,13 +318,19 @@ div.contact-text #tumblr-link {
 }
 
 .heroes ul li {
-	width:300px;
+	width:296px;
 	height:auto;
-	background:#000;
+	border-top: 1px solid #000;
+	border-bottom: 1px dashed #000;
+	background:none;
 	box-shadow:none;
 	font-family:'Merriweather';
 }
 
 .heroes ul li a {
 	color:#fff;
+}
+
+.heroes ul li a:hover {
+	color:#f05000;
 }
