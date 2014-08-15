@@ -22,7 +22,7 @@ a {text-decoration:none;}
     font-style: normal;
 }
 
-body {color:#000;background:#fff;font-family:BebasNeueRegular;}
+body {color:#000;background:#D0C3B5;font-family:BebasNeueRegular;}
 
 .tumblr-link {
 	position:absolute;
@@ -40,7 +40,7 @@ body {color:#000;background:#fff;font-family:BebasNeueRegular;}
 
 #wrap {
 	position:relative;
-	width: 1020px; margin: 0 auto;
+	width: 1002px; margin: 0 auto;
 	min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -50,7 +50,7 @@ body {color:#000;background:#fff;font-family:BebasNeueRegular;}
 	height:330px;
 }
 
-h1 {font-size:60px;margin-left:8px;margin-right:9px;margin-bottom:20px;padding-top:30px;text-shadow:0 1px 0 #fff;font-weight: normal;border-bottom: 1px dotted #000;}
+h1 {font-size:60px;margin-left:8px;margin-right:9px;margin-bottom:20px;padding-top:30px;text-shadow:0 1px 0 #E2DAD1;font-weight: normal;border-bottom: 1px dotted #000;}
 
 h1 a {color:#000;}
 
@@ -60,13 +60,13 @@ h2 a {color:#222;-webkit-transition:color .4s;-moz-transition:color .4s;-o-trans
 
 h2 a:hover {color:#f05000;}
 
-#menu_contact {padding-left:278px;}
+#menu_contact {padding-left:330px;}
 
 .active {color:#f05000;}
 
 .subtitles {font-size:24px;margin-left:10px;font-family:'Merriweather',serif;font-weight:400;}
 
-li {float:left; position:relative; display:inline-block; width:300px; height:300px;margin:10px; padding:10px; background:#fff; -webkit-box-shadow:0 0 5px rgba(0,0,0,.35);
+li {float:left; position:relative; display:inline-block; width:300px; height:300px;margin:10px; padding:7px; background:#fff; -webkit-box-shadow:0 0 5px rgba(0,0,0,.35);
 	-moz-boz-shadow: 0 0 5px rgba(0,0,0,.35);box-shadow:0 0 5px rgba(0,0,0,.35);}
 
 li div {font-family:Monaco;position:absolute;height:0; width:280px;background:rgba(0,0,0,.35);overflow:hidden;bottom:10px;left:10px; padding: 0 10px;-webkit-transition:height 1s;-moz-transition:height 1s;-o-transition:height 1s;-ms-transition:height 1s; transition:height 1s;color:#fff;line-height:50px;font-size:0.8em;}
@@ -243,7 +243,7 @@ p a:hover {color:#f05000;}
 	width: 1013px; margin: 0 auto;
 	height:75px;
 	border-top:dotted 1px #ccc;
-	background-color:#fff;
+	background-color:#D0C3B5;
     line-height:20px;
     margin-left:4px;   
 }
@@ -258,7 +258,7 @@ p a:hover {color:#f05000;}
 
 #footer p {
 	position:absolute;
-	color:#aaa;
+	color:#999;
 	left:0;
 	margin-left:10px;
 }
@@ -277,7 +277,8 @@ p a:hover {color:#f05000;}
 
 #footer img {
 	position:absolute;
-	margin:14px 14px 10px 10px;right:0;
+	margin:14px 29px 10px 10px;right:0;
+	opacity:0.3;
 }
 
 /* CONTACT PAGE */
