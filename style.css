@@ -22,7 +22,7 @@ a {text-decoration:none;}
     font-style: normal;
 }
 
-body {color:#000;background:#D0C3B5;font-family:BebasNeueRegular;}
+body {color:#000;background:#D0C3B5;background:#eee;font-family:BebasNeueRegular;}
 
 .tumblr-link {
 	position:absolute;
@@ -243,7 +243,7 @@ p a:hover {color:#f05000;}
 	width: 1013px; margin: 0 auto;
 	height:75px;
 	border-top:dotted 1px #ccc;
-	background-color:#D0C3B5;
+	background-color:#eee;
     line-height:20px;
     margin-left:4px;   
 }
@@ -277,7 +277,7 @@ p a:hover {color:#f05000;}
 
 #footer img {
 	position:absolute;
-	margin:14px 29px 10px 10px;right:0;
+	margin:16px 6px 10px 10px;right:0;
 }
 
 /* CONTACT PAGE */
