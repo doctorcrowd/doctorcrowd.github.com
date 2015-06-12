@@ -1,1 +1,1 @@
-document.write('<h1><a href="http://doctorcrowd.github.com">DOCTORCROWD<span class="subtitles">Visuals & Co.</span></a></h1><div class="tumblr-link"><a href="http://doctorcrowd.tumblr.com" target=_blank">Doctorcrowd\'s Archive on Tumblr</a></div>');
+document.write('<h1><a href="http://doctorcrowd.github.com">DOCTORCROWD<span class="subtitles">Visuals & Co.</span></a></h1><div class="tumblr-link"><a href="http://doctorcrowd.tumblr.com" target=_blank">Doctorcrowd\'s Research on Tumblr</a></div>');
